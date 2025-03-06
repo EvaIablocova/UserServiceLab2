@@ -16,7 +16,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: cisco1234
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     networks:
-      - mynetwork
+      - uiservicelab2_mynetwork
 
 
   db:
@@ -32,10 +32,10 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - mynetwork
+      - uiservicelab2_mynetwork
 
 networks:
-  mynetwork:
+  uiservicelab2_mynetwork:
     external: true  # Подключаемся к уже существующей сети
 
 volumes:
